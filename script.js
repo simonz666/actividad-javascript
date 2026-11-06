@@ -12,11 +12,11 @@ console.log(placaTexto2);
 console.log(placaTexto3);
 console.log(placaTexto.length);
 
-/*const numero = 7;
-const mensaje = numero %= 2;
-    ? "par" ;
-    : "impar";
-console.log(mensaje);*/
+const numero = 7;
+const mensaje = numero % 2 === 0
+    ?"par" 
+    :"impar";
+console.log(mensaje);
 
 for (let index = 0  ; index < placaTexto2.length; index+=1) {
      
@@ -63,6 +63,60 @@ function descuento(estrato) {
 
 console.log(descuento(recibos.estrato));
 
+const dia = "lunes";
+switch (dia) {
+    case "lunes":
+        console.log(dia.toUpperCase());
+        
+        break;
 
+    default:
+        console.log("zzz");
+        
+        break;
+}
+function realizarOperacion(num1,num2,operacionCallback) {
+    console.log("Operacion:", num1, "y", num2);
+    operacionCallback(num1,num2)
+}
 
+function sumar(a,b) {
+    console.log("Suma:", a+b);
+}
 
+function multiplicar(a,b) {
+    console.log("Multiplicacion:", a*b);
+}
+
+realizarOperacion(8,7,sumar);
+
+const pedido = new Promise(function(resolve,reject){
+    setTimeout(function() {
+        resolve("pizza lowkey")
+    }, 2000);
+});
+
+pedido.then(function(r){
+    console.log(r);
+})
+
+const guardarsecreto = true
+
+const secreto = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        if (guardarsecreto==true){
+            resolve("secreto safe");
+        } else {
+            reject("mlp");
+        }
+
+    },3000)  
+})
+
+secreto.then(function(rr){
+    console.log(rr);
+})
+.catch(function(ee){
+    console.log(ee);
+    
+})
