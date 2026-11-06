@@ -9,7 +9,7 @@ const direccion = {pais:"Colombia",
 const usuario = [perfil,direccion]
 
 function presentarse() {
-    return console.log("Hola, soy",perfil.nombre,perfil.apellido,"tengo",perfil.edad, "años y vivo en", direccion.ciudad, direccion.pais);
+    return console.log("Hola, soy",perfil.nombre,perfil.apellido,"tengo",perfil.edad, "años y vivo en", direccion.ciudad+",", direccion.pais+".");
     
     
 }
